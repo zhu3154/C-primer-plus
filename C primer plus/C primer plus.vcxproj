@@ -22,7 +22,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercise 4.4.c" />
+    <Text Include="复习题第4章.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

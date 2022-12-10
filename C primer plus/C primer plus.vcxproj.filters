@@ -18,8 +18,6 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercise 4.4.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <Text Include="复习题第4章.txt" />
   </ItemGroup>
 </Project>
