@@ -1,3 +1,4 @@
+//验证赋值作为子表达式的效果
 #include<stdio.h>
 int main(void)
 {
