@@ -21,9 +21,6 @@
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter 6\6.20 power.c" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

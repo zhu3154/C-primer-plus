@@ -17,9 +17,4 @@
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter 6\6.20 power.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
