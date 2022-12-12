@@ -1,4 +1,4 @@
-﻿//使用for循环创建一个立方表
+//使用for循环创建一个立方表
 #include<stdio.h>
 int main(void)
 {

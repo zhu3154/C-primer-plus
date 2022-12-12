@@ -1,4 +1,4 @@
-//ÑéÖ¤¸³Öµ×÷Îª×Ó±í´ïÊ½µÄĞ§¹û
+//éªŒè¯èµ‹å€¼è¡¨è¾¾å¼ä½œä¸ºå­è¡¨è¾¾å¼çš„ç»“æœ
 #include<stdio.h>
 int main(void)
 {
@@ -7,6 +7,8 @@ int main(void)
 
 	x = 6 + (y = 5);
 	printf("x = %d, y = %d", x, y);
+
+	getchar();
 
 	return 0;
 }
