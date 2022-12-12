@@ -18,7 +18,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="6.13 postage.c">
+    <ClCompile Include="Chapter 6\6.20 power.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
