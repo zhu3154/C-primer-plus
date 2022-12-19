@@ -21,9 +21,6 @@
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter 7\7.4 eletric.c" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
