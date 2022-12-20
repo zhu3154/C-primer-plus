@@ -18,7 +18,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test 7.3.c">
+    <ClCompile Include="test 7.10.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
