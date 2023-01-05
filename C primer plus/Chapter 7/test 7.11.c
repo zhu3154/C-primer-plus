@@ -1,20 +1,21 @@
-#include<stdio.h>
-#define P_YANGJI 2.05		//Ñó¼»µ¥¼Û
-#define P_TIANCAI 1.15		//Ìğ²Ëµ¥¼Û
-#define P_HULUOBO 1.09		//ºúÂÜ²·µ¥¼Û
-#define RANGE_DIS 100		//³¬¹ı±¾Ïû·Ñ´òÕÛ
-#define RATE_DIS -0.05		//ÕÛ¿ÛÂÊ
-#define RANGE1 5			//µÚÒ»µµÔË·ÑÖØÁ¿ÉÏÏŞ
-#define RANGE2 20			//µÚ¶şµµÔË·ÑÖØÁ¿ÉÏÏŞ
-#define YUNFEI0 6.5			//µÚÒ»µµÔË·Ñ
-#define YUNFEI1 14			//µÚ¶şµµÔË·Ñ
-#define YUNFEI 0.5			//³¬¹ı¶şµµÃ¿°ñ¶îÍâÔË·Ñ
-void menu(void);			//Ö÷²Ëµ¥
+#include <stdio.h>
+#include <stdlib.h>
+#define P_YANGJI 2.05  // æ´‹è“Ÿå•ä»·
+#define P_TIANCAI 1.15 // ç”œèœå•ä»·
+#define P_HULUOBO 1.09 // èƒ¡èåœå•ä»·
+#define RANGE_DIS 100  // è¶…è¿‡æœ¬æ¶ˆè´¹æ‰“æŠ˜
+#define RATE_DIS -0.05 // æŠ˜æ‰£ç‡
+#define RANGE1 5	   // ç¬¬ä¸€æ¡£è¿è´¹é‡é‡ä¸Šé™
+#define RANGE2 20	   // ç¬¬äºŒæ¡£è¿è´¹é‡é‡ä¸Šé™
+#define YUNFEI0 6.5	   // ç¬¬ä¸€æ¡£è¿è´¹
+#define YUNFEI1 14	   // ç¬¬äºŒæ¡£è¿è´¹
+#define YUNFEI 0.5	   // è¶…è¿‡äºŒæ¡£æ¯æ¦œé¢å¤–è¿è´¹
+void menu(void);	   // ä¸»èœå•
 int main(void)
 {
 	int option;
-	float m;				//µ¥´Î¶©¹ºÖØÁ¿
-	float m_all;			//×ÜÖØÁ¿
+	float m;	 // å•æ¬¡è®¢è´­é‡é‡
+	float m_all; // æ€»é‡é‡
 	float m_yangji = 0;
 	float m_tiancai = 0;
 	float m_huluobo = 0;
@@ -29,56 +30,63 @@ int main(void)
 	{
 		menu();
 		option = getchar();
-		while (getchar() != '\n');
+		while (getchar() != '\n')
+			;
 		switch (option)
 		{
 		case 'a':
 		case 'A':
-			printf("ÄãÑ¡ÔñÁË¶©¹ºÑó¼»\n");
-			printf("ÇëÊäÈëÒª¶©¹ºµÄÖØÁ¿£º\n");
+			printf("ä½ é€‰æ‹©äº†è®¢è´­æ´‹è“Ÿ\n");
+			printf("è¯·è¾“å…¥è¦è®¢è´­çš„é‡é‡ï¼š\n");
 			while (scanf_s("%f", &m))
 			{
-				while (getchar() != '\n');
+				while (getchar() != '\n')
+					;
 				m_yangji += m;
-				printf("Äã¶©¹ºÁË %.2f°õÑó¼»£¬×Ü¼Æ¶©¹ºÑó¼» %.2f°õ\n",
-					m, m_yangji);
-				printf("¼ÌĞøÊäÈë¶©¹º»òÊäÈë·ÇÊı×Ö·µ»Ø²Ëµ¥£º\n");
+				printf("ä½ è®¢è´­äº† %.2fç£…æ´‹è“Ÿï¼Œæ€»è®¡è®¢è´­æ´‹è“Ÿ %.2fç£…\n",
+					   m, m_yangji);
+				printf("ç»§ç»­è¾“å…¥è®¢è´­æˆ–è¾“å…¥éæ•°å­—è¿”å›èœå•ï¼š\n");
 			}
-			while (getchar() != '\n');
+			while (getchar() != '\n')
+				;
 			break;
 		case 'b':
 		case 'B':
-			printf("ÄãÑ¡ÔñÁË¶©¹ºÌğ²Ë\n");
-			printf("ÇëÊäÈëÒª¶©¹ºµÄÖØÁ¿£º\n");
+			printf("ä½ é€‰æ‹©äº†è®¢è´­ç”œèœ\n");
+			printf("è¯·è¾“å…¥è¦è®¢è´­çš„é‡é‡ï¼š\n");
 			while (scanf_s("%f", &m))
 			{
-				while (getchar() != '\n');
+				while (getchar() != '\n')
+					;
 				m_tiancai += m;
-				printf("Äã¶©¹ºÁË %.2f°õÌğ²Ë£¬×Ü¼Æ¶©¹ºÌğ²Ë %.2f°õ\n",
-					m, m_tiancai);
-				printf("¼ÌĞøÊäÈë¶©¹º»òÊäÈë·ÇÊı×Ö·µ»Ø²Ëµ¥£º\n");
+				printf("ä½ è®¢è´­äº† %.2fç£…ç”œèœï¼Œæ€»è®¡è®¢è´­ç”œèœ %.2fç£…\n",
+					   m, m_tiancai);
+				printf("ç»§ç»­è¾“å…¥è®¢è´­æˆ–è¾“å…¥éæ•°å­—è¿”å›èœå•ï¼š\n");
 			}
-			while (getchar() != '\n');
+			while (getchar() != '\n')
+				;
 			break;
 		case 'c':
 		case 'C':
-			printf("ÄãÑ¡ÔñÁË¶©¹ººúÂÜ²·\n");
-			printf("ÇëÊäÈëÒª¶©¹ºµÄÖØÁ¿£º\n");
+			printf("ä½ é€‰æ‹©äº†è®¢è´­èƒ¡èåœ\n");
+			printf("è¯·è¾“å…¥è¦è®¢è´­çš„é‡é‡ï¼š\n");
 			while (scanf_s("%f", &m))
 			{
-				while (getchar() != '\n');
+				while (getchar() != '\n')
+					;
 				m_huluobo += m;
-				printf("Äã¶©¹ºÁË %.2f°õºúÂÜ²·£¬×Ü¼Æ¶©¹ººúÂÜ²· %.2f°õ\n",
-					m, m_huluobo);
-				printf("¼ÌĞøÊäÈë¶©¹º»òÊäÈë·ÇÊı×Ö·µ»Ø²Ëµ¥£º\n");
+				printf("ä½ è®¢è´­äº† %.2fç£…èƒ¡èåœï¼Œæ€»è®¡è®¢è´­èƒ¡èåœ %.2fç£…\n",
+					   m, m_huluobo);
+				printf("ç»§ç»­è¾“å…¥è®¢è´­æˆ–è¾“å…¥éæ•°å­—è¿”å›èœå•ï¼š\n");
 			}
-			while (getchar() != '\n');
+			while (getchar() != '\n')
+				;
 			break;
 		case 'q':
 		case 'Q':
 			goto end;
 		default:
-			printf("ÄãÊäÈëÁË´íÎóµÄÑ¡Ïî£¬ÇëÖØÊÔ£º\n");
+			printf("ä½ è¾“å…¥äº†é”™è¯¯çš„é€‰é¡¹ï¼Œè¯·é‡è¯•ï¼š\n");
 			break;
 		}
 	}
@@ -86,20 +94,20 @@ end:
 	m_yangji = m_yangji > 0 ? m_yangji : 0;
 	m_tiancai = m_tiancai > 0 ? m_tiancai : 0;
 	m_huluobo = m_huluobo > 0 ? m_huluobo : 0;
-	printf("Æ·Ãû         ÖØÁ¿         "
-		"µ¥¼Û         ×Ü¼Û\n");
+	printf("å“å         é‡é‡         "
+		   "å•ä»·         æ€»ä»·\n");
 	if (m_yangji > 0)
-		printf("Ñó¼»£º  %10.2f°õ%10.2f%14.2f\n",
-			m_yangji, P_YANGJI, s_yangji = m_yangji * P_YANGJI);
+		printf("æ´‹è“Ÿï¼š  %10.2fç£…%10.2f%14.2f\n",
+			   m_yangji, P_YANGJI, s_yangji = m_yangji * P_YANGJI);
 	if (m_tiancai > 0)
-		printf("Ìğ²Ë£º  %10.2f°õ%10.2f%14.2f\n",
-			m_tiancai, P_TIANCAI, s_tiancai = m_tiancai * P_TIANCAI);
+		printf("ç”œèœï¼š  %10.2fç£…%10.2f%14.2f\n",
+			   m_tiancai, P_TIANCAI, s_tiancai = m_tiancai * P_TIANCAI);
 	if (m_huluobo > 0)
-		printf("ºúÂÜ²·£º%10.2f°õ%10.2f%14.2f\n",
-			m_huluobo, P_HULUOBO, s_huluobo = m_huluobo * P_HULUOBO);
-	printf("\n×Ü¼Û£º%10.2f\n", sum = s_yangji + s_tiancai + s_huluobo);
+		printf("èƒ¡èåœï¼š%10.2fç£…%10.2f%14.2f\n",
+			   m_huluobo, P_HULUOBO, s_huluobo = m_huluobo * P_HULUOBO);
+	printf("\næ€»ä»·ï¼š%10.2f\n", sum = s_yangji + s_tiancai + s_huluobo);
 	if (sum >= RANGE_DIS)
-		printf("ÕÛ¿Û£º%10.2f\n", zhekou = sum * RATE_DIS);
+		printf("æŠ˜æ‰£ï¼š%10.2f\n", zhekou = sum * RATE_DIS);
 	m_all = m_yangji + m_tiancai + m_huluobo;
 	if (m_all <= RANGE1)
 		yunfei = YUNFEI0;
@@ -107,8 +115,10 @@ end:
 		yunfei = YUNFEI1;
 	else
 		yunfei = YUNFEI1 + (m_all - RANGE2) * YUNFEI;
-	printf("ÔË·Ñ£º%10.2f\n", yunfei);
-	printf("Ó¦¸¶·ÑÓÃ£º%6.2f\n", sum + zhekou + yunfei);
+	printf("è¿è´¹ï¼š%10.2f\n", yunfei);
+	printf("åº”ä»˜è´¹ç”¨ï¼š%6.2f\n", sum + zhekou + yunfei);
+
+	system("pause");
 
 	return 0;
 }
@@ -120,11 +130,11 @@ void menu(void)
 	for (i = 0; i < 50; i++)
 		putchar('*');
 	putchar('\n');
-	printf("ABCÔÓ»õµê¶©¹º²Ëµ¥£¬ÇëÊäÈëÏàÓ¦Ñ¡ÏîÇ°µÄ×ÖÄ¸£º\n");
-	printf("a) Ñó¼» $%4.2f\t\t\tb) Ìğ²Ë $%4.2f\n",
-		P_YANGJI, P_TIANCAI);
-	printf("c) ºúÂÜ²· $%4.2f\n", P_HULUOBO);
-	printf("q) ÍË³ö²¢½áËã\n");
+	printf("ABCæ‚è´§åº—è®¢è´­èœå•ï¼Œè¯·è¾“å…¥ç›¸åº”é€‰é¡¹å‰çš„å­—æ¯ï¼š\n");
+	printf("a) æ´‹è“Ÿ $%4.2f\t\t\tb) ç”œèœ $%4.2f\n",
+		   P_YANGJI, P_TIANCAI);
+	printf("c) èƒ¡èåœ $%4.2f\n", P_HULUOBO);
+	printf("q) é€€å‡ºå¹¶ç»“ç®—\n");
 	for (i = 0; i < 50; i++)
 		putchar('*');
 	putchar('\n');
