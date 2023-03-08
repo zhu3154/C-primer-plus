@@ -1,12 +1,11 @@
-//重复输入，直到文件结尾
-#include<stdio.h>
+// 锟截革拷锟斤拷锟诫，直锟斤拷锟侥硷拷锟斤拷尾
+#include <stdio.h>
 int main(void)
 {
-	char ch;
+	int ch;
 
 	while ((ch = getchar()) != EOF)
 		putchar(ch);
-	getchar();
 
 	return 0;
 }
