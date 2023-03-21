@@ -3,7 +3,7 @@
 char *s_gets(char *str, int n);
 char menu(void);
 void strs_print(char str[][100], int serial[], int n); // 按顺序打印n行字符串
-void print_ascii(char str[][100],int n);
+void print_ascii(char str[][100], int n);
 
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
     int line = 0; // line = 有效行数
     int serial[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    puts("输入10行字符串");
+    puts("输入10行字符串或CTRL+Z停止输入");
     while (line < 10 && s_gets(str[line], 100))
         line++;
 
@@ -23,7 +23,9 @@ int main(void)
         case '1':
             strs_print(str, serial, line);
             break;
-
+        case '2':
+            print_ascii(str, line);
+            break;
         default:
             break;
         }
@@ -60,7 +62,7 @@ char menu(void)
     char ch;
 
     puts("************************************************************");
-    printf("%-33s %s\n", "1) 打印源字符串列表", "2) 按ASCII瞬狙打印字符串");
+    printf("%-33s %s\n", "1) 打印源字符串列表", "2) 按ASCII顺序打印字符串");
     printf("%-33s %s\n", "3) 按长度递增顺序打印字符串", "4) 按首单词长度打印字符串");
     printf("5) 退出\n");
     puts("************************************************************");
@@ -101,8 +103,18 @@ void strs_print(char str[][100], int serial[], int n)
 void print_ascii(char str[][100], int n)
 {
     int serial[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int i;
+    int i, j;
+    int temp;
 
-    for (i=0;i<n;i++)
-    for()
+    for (i = 0; i < n; i++)
+        for (j = i + 1; j < n; j++)
+        {
+            if (strcmp(str[serial[i]], str[serial[j]]) > 0)
+            {
+                temp = serial[i];
+                serial[i] = serial[j];
+                serial[j] = temp;
+            }
+        }
+    strs_print(str, serial, n);
 }
